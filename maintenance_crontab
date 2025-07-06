@@ -1,0 +1,12 @@
+# Automated System Maintenance Schedule
+# Homebrew maintenance: Every Sunday at 10:00 AM
+0 10 * * 0 /bin/bash ~/Scripts/brew_maintenance.sh >> ~/Scripts/brew_maintenance.log 2>&1
+
+# System cleanup: Every Wednesday at 9:00 AM
+0 9 * * 3 /bin/bash ~/Scripts/system_cleanup.sh >> ~/Scripts/system_cleanup.log 2>&1
+
+# Document backup: Every Friday at 6:00 PM
+0 18 * * 5 /bin/bash ~/Scripts/document_backup.sh >> ~/Scripts/document_backup.log 2>&1
+
+# Package updates: Every Tuesday at 11:00 AM
+0 11 * * 2 /bin/bash ~/Scripts/package_updates.sh >> ~/Scripts/package_updates.log 2>&1
