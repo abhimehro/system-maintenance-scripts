@@ -1,0 +1,17 @@
+Initial commit: System maintenance scripts suite
+
+- Add comprehensive README with environment-loading setup
+- Include troubleshooting guide and script usage documentation
+- Add all maintenance scripts with proper environment configuration
+- Include Raycast integration scripts for quick access
+- Add .gitignore for proper repository management
+
+Features:
+✅ Automated weekly maintenance via launchd
+✅ Individual script execution with logging
+✅ Environment variable preservation with bash -l
+✅ Comprehensive error handling and troubleshooting
+✅ Development environment maintenance (npm, pip, gems, etc.)
+✅ System cleanup and optimization
+✅ Document backup with timestamp archiving
+✅ Package updates for macOS and Homebrew

@@ -1,0 +1,3 @@
+==> Updating Homebrew...
+Warning: Cask ollama was renamed to ollama-app.
+Error: Cask 'ollama-app' is not installed.

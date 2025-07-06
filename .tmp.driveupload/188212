@@ -1,0 +1,47 @@
+# Log files
+*.log
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Backup archives (keep local, don't track in git)
+*.tar.gz
+*.zip
+Backups/
+
+# Temporary script files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Personal configuration files that shouldn't be shared
+*_personal.sh
+*_local.sh
+.env
+.env.local
+
+# Archive directories
+logs_archive/
+old_scripts/

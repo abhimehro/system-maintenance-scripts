@@ -1,0 +1,173 @@
+🚀 Running Complete System Maintenance...
+========================================
+
+🔄 Starting: 🧹 System Cleanup
+----------------------------------------
+🧹 Starting System Cleanup & Maintenance...
+================================================
+💾 Current disk usage:
+   Available: 101Gi (10% used)
+
+🗑️  Cleaning Downloads folder (files older than 30 days)...
+   Removed 0 old files from Downloads
+
+🗂️  Cleaning Trash...
+   Trash emptied
+
+📱 Cleaning iOS device backups (keeping latest 2)...
+   No iOS backups found
+
+🧹 Cleaning system caches...
+   User caches: 314M → 314M
+
+📋 Cleaning system logs...
+   System logs optimized
+
+🔄 Cleaning temporary files...
+   Removed 0 temporary files
+
+🌐 Cleaning browser caches...
+
+📦 Cleaning package manager caches...
+   npm cache: 299M → 296M
+   pip cache:  → 
+
+🔧 Running system maintenance...
+   Verifying disk permissions...
+
+================================================
+✅ System cleanup complete!
+📊 Final status:
+💾 Current disk usage:
+   Available: 101Gi (10% used)
+🕐 Completed at: Sun Jul  6 11:49:47 CDT 2025
+
+✅ Completed: 🧹 System Cleanup (13s)
+========================================
+
+🔄 Starting: 📦 Package Updates
+----------------------------------------
+📦 Starting Package Manager Updates...
+======================================
+🍺 Updating Homebrew...
+🔄 Updating Homebrew database...
+   ✅ Success
+🔄 Upgrading Homebrew packages...
+   ✅ Success
+🔄 Cleaning Homebrew cache...
+   ✅ Success
+   ✅ Homebrew updated
+
+📗 Updating npm packages...
+🔄 Updating global npm packages...
+   ✅ Success
+🔄 Cleaning npm cache...
+   ✅ Success
+   ✅ All npm packages up to date
+
+🐍 Updating Python packages...
+   ✅ All pip packages up to date
+🔄 Cleaning pip cache...
+   ✅ Success
+
+💎 Updating Ruby gems...
+🔄 Updating RubyGems system...
+   ⚠️  Failed or not needed
+🔄 Updating installed gems...
+   ⚠️  Failed or not needed
+🔄 Cleaning old gem versions...
+   ✅ Success
+   ✅ Ruby gems updated
+
+   ⚠️  cargo not found
+
+   ⚠️  go not found
+
+🍎 Checking App Store updates...
+   💡 Install 'mas' for App Store CLI: brew install mas
+
+🔧 Checking system updates...
+   ✅ System up to date
+
+======================================
+✅ Package manager updates complete!
+📊 Summary:
+   🍺 Homebrew: ✅
+   📗 npm: ✅
+   🐍 pip: ✅
+   💎 gem: ✅
+   🦀 cargo: ❌
+   🍎 mas: ❌
+🕐 Completed at: Sun Jul  6 11:50:43 CDT 2025
+
+✅ Completed: 📦 Package Updates (56s)
+========================================
+
+🔄 Starting: 🍺 Homebrew Maintenance
+----------------------------------------
+🍺 Starting Homebrew Weekly Maintenance...
+========================================
+📥 Updating Homebrew...
+Already up-to-date.
+⬆️  Upgrading packages...
+🧹 Cleaning up...
+🩺 Running health check...
+Your system is ready to brew.
+========================================
+✅ Homebrew maintenance complete!
+📊 Current status:
+   Installed packages: 121
+   Cache size: 192M /Users/abhimehrotra/Library/Caches/Homebrew
+🕐 Completed at: Sun Jul  6 11:50:54 CDT 2025
+
+✅ Completed: 🍺 Homebrew Maintenance (11s)
+========================================
+
+🔄 Starting: 💾 Document Backup
+----------------------------------------
+💾 Starting Document Backup...
+==================================
+📁 Backup location: /Users/abhimehrotra/Backups/documents_backup_20250706_115054
+
+📂 Backing up /Users/abhimehrotra/Documents...
+   ✅ 9600 files ( 78M) backed up
+📂 Backing up /Users/abhimehrotra/Desktop...
+   ✅ 22303 files (6.9M) backed up
+📂 Backing up /Users/abhimehrotra/Scripts...
+   ✅ 20 files (100K) backed up
+
+⚙️  Backing up application preferences...
+📂 Backing up /Users/abhimehrotra/Library/Application Support/com.raycast.macos...
+   ✅ 580 files (499M) backed up
+🔑 Backing up SSH keys...
+   ✅ SSH configuration backed up
+🌿 Backing up Git configuration...
+   ✅ Git config backed up
+🐚 Backing up shell configurations...
+   ✅ Shell configs backed up
+
+📦 Creating compressed archive...
+   ✅ Archive created: documents_backup_20250706_115054.tar.gz (433M)
+
+🧹 Cleaning up old backups (keeping latest 5)...
+
+==================================
+✅ Backup completed successfully!
+📊 Backup summary:
+   📁 Location: /Users/abhimehrotra/Backups
+   📦 Latest: documents_backup_20250706_115054.tar.gz
+   📈 Total backups: 2
+   💾 Total backup size: 867M
+🕐 Completed at: Sun Jul  6 11:51:21 CDT 2025
+
+✅ Completed: 💾 Document Backup (27s)
+========================================
+
+🎉 All maintenance tasks completed!
+📊 Check individual logs for details:
+   ~/Scripts/system_cleanup.log
+   ~/Scripts/package_updates.log
+   ~/Scripts/brew_maintenance.log
+   ~/Scripts/document_backup.log
+
+🕐 Full maintenance completed at: Sun Jul  6 11:51:21 CDT 2025
