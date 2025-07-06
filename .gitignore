@@ -45,3 +45,7 @@ Backups/
 # Archive directories
 logs_archive/
 old_scripts/
+
+# Temporary drive upload files
+.tmp.driveupload/
+*.tmp.driveupload
