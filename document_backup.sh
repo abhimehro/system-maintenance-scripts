@@ -93,10 +93,17 @@ fi
 # Cleanup old backups (keep last 5)
 echo ""
 echo "🧹 Cleaning up old backups (keeping latest 5)..."
-ls -1t "$BACKUP_DIR"/documents_backup_*.tar.gz 2>/dev/null | tail -n +6 | while read old_backup; do
-    rm -f "$old_backup"
-    echo "   🗑️  Removed: $(basename "$old_backup")"
-done
+backup_files=($(ls -1t "$BACKUP_DIR"/documents_backup_*.tar.gz 2>/dev/null))
+if [ ${#backup_files[@]} -gt 5 ]; then
+    # Remove files beyond the 5th one
+    for ((i=5; i<${#backup_files[@]}; i++)); do
+        rm -f "${backup_files[$i]}"
+        echo "   🗑️  Removed: $(basename "${backup_files[$i]}")"
+    done
+    echo "   ✅ Cleaned up $((${#backup_files[@]} - 5)) old backups"
+else
+    echo "   ✅ No cleanup needed (${#backup_files[@]} backups total)"
+fi
 
 # Summary
 echo ""
