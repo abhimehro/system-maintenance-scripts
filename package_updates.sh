@@ -14,8 +14,14 @@ safe_run() {
     local cmd="$1"
     local description="$2"
     
+    # Validate command to prevent command injection
+    if [[ "$cmd" =~ [;&|`$] ]]; then
+        echo "   ❌ Invalid command detected, skipping"
+        return 1
+    fi
+    
     echo "🔄 $description..."
-    if eval "$cmd" >/dev/null 2>&1; then
+    if bash -c "$cmd" >/dev/null 2>&1; then
         echo "   ✅ Success"
     else
         echo "   ⚠️  Failed or not needed"

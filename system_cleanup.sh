@@ -15,10 +15,14 @@ show_disk_usage
 
 echo ""
 echo "🗑️  Cleaning Downloads folder (files older than 30 days)..."
-find ~/Downloads -type f -mtime +30 -exec rm -f {} \; 2>/dev/null
-find ~/Downloads -type d -empty -delete 2>/dev/null
-downloads_cleaned=$(find ~/Downloads -type f -mtime +30 2>/dev/null | wc -l | xargs)
-echo "   Removed $downloads_cleaned old files from Downloads"
+# Use find with -delete for better performance and combine operations
+if [ -d ~/Downloads ]; then
+    downloads_cleaned=$(find ~/Downloads -type f -mtime +30 -delete 2>/dev/null | wc -l | xargs)
+    find ~/Downloads -type d -empty -delete 2>/dev/null
+    echo "   Removed $downloads_cleaned old files from Downloads"
+else
+    echo "   Downloads directory not found"
+fi
 
 echo ""
 echo "🗂️  Cleaning Trash..."
@@ -47,10 +51,13 @@ echo "🧹 Cleaning system caches..."
 # User caches
 if [ -d ~/Library/Caches ]; then
     cache_size_before=$(du -sh ~/Library/Caches 2>/dev/null | cut -f1)
+    # Use -delete for better performance
     find ~/Library/Caches -type f -mtime +7 -delete 2>/dev/null
     find ~/Library/Caches -type d -empty -delete 2>/dev/null
     cache_size_after=$(du -sh ~/Library/Caches 2>/dev/null | cut -f1)
     echo "   User caches: $cache_size_before → $cache_size_after"
+else
+    echo "   User caches: Directory not found"
 fi
 
 # Clear system logs older than 7 days
@@ -68,8 +75,8 @@ echo "🔄 Cleaning temporary files..."
 temp_cleaned=0
 for temp_dir in /tmp ~/Library/Application\ Support/*/tmp; do
     if [ -d "$temp_dir" ]; then
-        temp_files=$(find "$temp_dir" -type f -mtime +1 2>/dev/null | wc -l | xargs)
-        find "$temp_dir" -type f -mtime +1 -delete 2>/dev/null
+        # Count and delete in one operation for better performance
+        temp_files=$(find "$temp_dir" -type f -mtime +1 -delete 2>/dev/null | wc -l | xargs)
         temp_cleaned=$((temp_cleaned + temp_files))
     fi
 done
